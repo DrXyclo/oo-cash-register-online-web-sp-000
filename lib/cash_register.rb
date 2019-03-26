@@ -68,8 +68,7 @@ class CashRegister
     
   
   
-  
-end 
+   
 =begin 
   describe '#items' do
     it 'returns an array containing all items that have been added' do
