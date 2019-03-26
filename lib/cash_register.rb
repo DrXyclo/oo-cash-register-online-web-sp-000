@@ -38,7 +38,7 @@ class CashRegister
    # list of object titles, or list of titles for one object 
    item = CashRegister.new
    item.title = @title 
-   @@items_array << item.title 
+   @@items_array << Array.new(item.title, @quantity)
     
   end 
   
