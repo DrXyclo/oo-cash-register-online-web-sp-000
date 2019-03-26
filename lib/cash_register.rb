@@ -16,6 +16,7 @@ class CashRegister
     @total =  @total + (price*quantity)
     @title = title
     @quantity = quantity
+    @price = price
     # items 
     # binding.pry 
   end 
@@ -31,7 +32,7 @@ class CashRegister
   end 
   
   
-## need class method because an instance method is operating on the instance of the add_item which is tomoat, it's why egg never shows up and why adding potato "overwrites" tomato.  The test is inializing a new CashRegister object and adding an sitnace of eggs and an intsance of 3 tomatoes.  I want to create 
+## need class method because an instance method is operating on the instance of the add_item which is tomoat, it's why egg never shows up and why adding potato "overwrites" tomato.  The test is inializing a new CashRegister object and adding an sitnace of eggs and an intsance of 3 tomatoes.  I want to create.  
 
   def self.items 
    # list of object titles, or list of titles for one object 
