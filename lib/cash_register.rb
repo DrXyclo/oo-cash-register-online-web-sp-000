@@ -36,8 +36,9 @@ class CashRegister
 
   def items 
    # list of object titles, or list of titles for one object 
-   
-   @@items_array << CashRegister.title  
+   item = CashRegister.new
+   item.title = @title 
+   @@items_array << item 
     
   end 
   
