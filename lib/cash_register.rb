@@ -45,7 +45,7 @@ class CashRegister
     
   end 
   
-  
+=begin 
   
     def items 
    # list of object titles, or list of titles for one object 
@@ -55,7 +55,7 @@ class CashRegister
       @@items_array << item 
     end
    end 
-  
+=end  
 #  song = Song.new 
 #  song.name = name
 #  @@songs << song 
