@@ -38,7 +38,7 @@ class CashRegister
    # list of object titles, or list of titles for one object 
     item = CashRegister.new
     item.title = @title 
-    Array.new(@quantity, item.title).each |item|
+    Array.new(@quantity, item.title).each do |item|
       @@items_array << item 
     end
    end 
