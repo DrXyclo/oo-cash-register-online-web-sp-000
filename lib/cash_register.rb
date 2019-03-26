@@ -41,7 +41,7 @@ class CashRegister
     Array.new(@quantity, item.title).each |item|
       @@items_array << item 
     end
-   
+   end 
     
   end 
   
