@@ -45,8 +45,8 @@ class CashRegister
   end 
     
   def void_last_transaction
-    
-    
+    ## take the last item in the items array and delete it from the total
+  end 
 
 
 
