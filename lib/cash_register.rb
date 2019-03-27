@@ -23,11 +23,8 @@ class CashRegister
   def apply_discount
     
     if discount != 0
-      discount_true = "After the discount, the total comes to $#{@total.to_i}."
       @total = @total - (@total*(@discount.to_f*0.01))
-      discount_true
-     
-     ## return "After the discount, the total comes to $#{@total.to_i}."  ##Anti-pattern: another way to return? set a variable to the string return variable ##
+        return "After the discount, the total comes to $#{@total.to_i}."  ##Anti-pattern: another way to return? set a variable to the string return variable ## doesn't work if variable is declared before calculation, it returns the old value, not discount value 
     elsif discount == 0
        "There is no discount to apply."
     end
