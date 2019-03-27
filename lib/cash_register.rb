@@ -39,64 +39,8 @@ class CashRegister
     
   end 
 
-
-
 end 
   
-=begin 
-
-  def items 
-   # list of object titles, or list of titles for one object 
-    item = CashRegister.new
-    item.title = @title 
-    Array.new(@quantity, item.title).each do |item|
-      @@items_array << item 
-    end
-   end 
-  
-    def items 
-   # list of object titles, or list of titles for one object 
-    item = CashRegister.new
-    item.title = @title 
-    Array.new(@quantity, item.title).each do |item|
-      @@items_array << item 
-    end
-   end 
-=end  
-#  song = Song.new 
-#  song.name = name
-#  @@songs << song 
-  
-
- #     new_register = CashRegister.new
-  #    new_register.title = title
-   #   @@items_array << new_register 
-      
-  
- 
- #   items_array = Array.new(@quantity, @title)
-#  items_array.each do |item|
- #     #  binding.pry
-  #    @@items_array << item
-  #    
-  #  end
-   # binding.pry 
-# @@items_array 
-#  end 
-    
-  
-  
-   
-=begin 
-  describe '#items' do
-    it 'returns an array containing all items that have been added' do
-      new_register = CashRegister.new
-      new_register.add_item("eggs", 1.99)
-      new_register.add_item("tomato", 1.76, 3)
-      expect(new_register.items).to eq(["eggs", "tomato", "tomato", "tomato"])
-    end
-  end
-
   describe '#void_last_transaction' do
     it 'subtracts the last transaction from the total' do
       cash_register.add_item("tomato", 1.76)
