@@ -9,7 +9,7 @@ class CashRegister
     # binding.pry 
     @total = 0
     @discount = discount
-    @@items_array = [] ## need global
+    @items_array = [] ## need global
   end
 
   def add_item(title, price, quantity = 1)
@@ -20,9 +20,8 @@ class CashRegister
     @quantity = quantity
 
     
-    @items_instance_array = Array.new(quantity, title)
-    @items_instance_array.each do |item|
-      @@items_array << item
+    Array.new(quantity, title).each do |item|
+      @items_array << item
     end
   end 
 =begin    
