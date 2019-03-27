@@ -18,6 +18,8 @@ class CashRegister
     Array.new(quantity, title).each do |item|
       @items_array << item
     end
+    
+    @price = price
   end 
 
   def apply_discount
@@ -36,6 +38,7 @@ class CashRegister
     
   def void_last_transaction
     ## take the last item in the items array and delete the price from the total
+    @total = @total - @price 
     
   end 
 
