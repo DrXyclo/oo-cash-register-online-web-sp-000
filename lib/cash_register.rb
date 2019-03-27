@@ -21,8 +21,9 @@ class CashRegister
   end 
 
   def apply_discount
-    discount_true = "After the discount, the total comes to $#{@total.to_i}."
+    
     if discount != 0
+      discount_true = "After the discount, the total comes to $#{@total.to_i}."
       @total = @total - (@total*(@discount.to_f*0.01))
       discount_true
      
