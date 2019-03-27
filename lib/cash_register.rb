@@ -9,22 +9,22 @@ class CashRegister
     # binding.pry 
     @total = 0
     @discount = discount
-    @@items_array = []
+    @@items_array = [] ## need global
   end
 
   def add_item(title, price, quantity = 1)
-   # binding.pry 
+
     @total =  @total + (price*quantity)
+    
     @title = title
     @quantity = quantity
     @price = price
+    
     @items_instance_array = Array.new(quantity, title)
     @items_instance_array.each do |item|
-      binding.pry
       @@items_array << item
     end
-    # items 
-    # binding.pry 
+
   end 
 
   def apply_discount
@@ -36,9 +36,6 @@ class CashRegister
        "There is no discount to apply."
     end
   end 
-  
-  
-## need class method because an instance method is operating on the instance of the add_item which is tomoat, it's why egg never shows up and why adding potato "overwrites" tomato.  The test is inializing a new CashRegister object and adding an sitnace of eggs and an intsance of 3 tomatoes.  I want to create.  
 
   def items 
     @@items_array
