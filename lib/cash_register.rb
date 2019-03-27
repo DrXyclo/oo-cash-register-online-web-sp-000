@@ -17,6 +17,7 @@ class CashRegister
     @title = title
     @quantity = quantity
     @price = price
+    @items_instance_array = Array.new(quanity, title)
     # items 
     # binding.pry 
   end 
