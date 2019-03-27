@@ -18,7 +18,7 @@ class CashRegister
     
     @title = title
     @quantity = quantity
-    @price = price
+
     
     @items_instance_array = Array.new(quantity, title)
     @items_instance_array.each do |item|
