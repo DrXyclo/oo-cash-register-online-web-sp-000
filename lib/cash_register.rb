@@ -9,14 +9,12 @@ class CashRegister
     # binding.pry 
     @total = 0
     @discount = discount
-    @items_array = [] ## need global
+    @items_array = [] ## need @instance variable that clear with each new CashRegister instance
   end
 
   def add_item(title, price, quantity = 1)
-
     @total =  @total + (price*quantity)
-
-    
+ 
     Array.new(quantity, title).each do |item|
       @items_array << item
     end
@@ -26,7 +24,6 @@ class CashRegister
     if discount != 0
       @total = @total - (@total*(@discount.to_f*0.01))
       return "After the discount, the total comes to $#{@total.to_i}."  ##Anti-pattern: another way to return?
-      
     elsif discount == 0
        "There is no discount to apply."
     end
@@ -34,7 +31,6 @@ class CashRegister
 
   def items 
     @items_array
-    
   end 
     
   def void_last_transaction
