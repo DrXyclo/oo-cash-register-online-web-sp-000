@@ -53,7 +53,7 @@ class CashRegister
   end 
 
   def items 
-    @@items_array
+    @items_array
     
   end 
     
