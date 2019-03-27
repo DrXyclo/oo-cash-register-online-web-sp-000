@@ -24,8 +24,24 @@ class CashRegister
     @items_instance_array.each do |item|
       @@items_array << item
     end
+  end 
+=begin    
+      def add_item(title, price, quantity = 1)
+
+    @total =  @total + (price*quantity)
+    
+    @title = title
+    @quantity = quantity
+    @price = price
+    
+    @items_instance_array = Array.new(quantity, title)
+    @items_instance_array.each do |item|
+      @@items_array << item
+    end
 
   end 
+
+=end 
 
   def apply_discount
     if discount != 0
