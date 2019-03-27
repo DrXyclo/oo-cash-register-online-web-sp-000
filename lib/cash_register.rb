@@ -36,6 +36,15 @@ class CashRegister
 ## need class method because an instance method is operating on the instance of the add_item which is tomoat, it's why egg never shows up and why adding potato "overwrites" tomato.  The test is inializing a new CashRegister object and adding an sitnace of eggs and an intsance of 3 tomatoes.  I want to create.  
 
   def items 
+    @items_instance_array
+    
+  end 
+    
+  end 
+  
+=begin 
+
+  def items 
    # list of object titles, or list of titles for one object 
     item = CashRegister.new
     item.title = @title 
@@ -43,10 +52,6 @@ class CashRegister
       @@items_array << item 
     end
    end 
-    
-  end 
-  
-=begin 
   
     def items 
    # list of object titles, or list of titles for one object 
