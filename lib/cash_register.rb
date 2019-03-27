@@ -18,7 +18,10 @@ class CashRegister
     @quantity = quantity
     @price = price
     @items_instance_array = Array.new(quantity, title)
-    binding.pry 
+    @items_instance_array.each do |item|
+      binding.pry
+      @@items_array << item
+    end
     # items 
     # binding.pry 
   end 
