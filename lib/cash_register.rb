@@ -21,9 +21,12 @@ class CashRegister
   end 
 
   def apply_discount
+    discount_true = "After the discount, the total comes to $#{@total.to_i}."
     if discount != 0
       @total = @total - (@total*(@discount.to_f*0.01))
-      return "After the discount, the total comes to $#{@total.to_i}."  ##Anti-pattern: another way to return?
+      discount_true
+     
+     ## return "After the discount, the total comes to $#{@total.to_i}."  ##Anti-pattern: another way to return? set a variable to the string return variable ##
     elsif discount == 0
        "There is no discount to apply."
     end
@@ -35,6 +38,7 @@ class CashRegister
     
   def void_last_transaction
     ## take the last item in the items array and delete the price from the total
+    
   end 
 
 
